@@ -34,9 +34,8 @@ The bot understands your questions, retrieves relevant answers from an official 
 
 ---
 
-## 🧠 RAG Architecture
+## 🧠 Flow
 
-flowchart LR
 A[PDF Document] --> B[Text Splitter]
 B --> C[Embedding Model]
 C --> D[Qdrant Vector DB]
@@ -49,24 +48,23 @@ H --> I[Qwen LLM via Ollama]
 E --> I
 I --> J[Final Answer]
 
-
-
+---
 📦 Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/YOUR-USERNAME/tn-esavai-chatbot.git
-cd tn-esavai-chatbot
+
 2️⃣ Install Python Dependencies
 pip install streamlit langchain langchain-community langchain-text-splitters langchain-qdrant qdrant-client litellm pypdf
+
 3️⃣ Setup Ollama + Models
 Install Ollama:
 👉 https://ollama.ai
 
-Pull Chat Model:
-ollama pull qwen:0.6b
-Pull Embedding Model:
-ollama pull nomic-embed-text
-Ensure Ollama is running:
-ollama serve
+Pull Chat Model:---> ollama pull qwen:0.6b
+
+Pull Embedding Model:---> ollama pull nomic-embed-text
+Ensure Ollama is running:---> ollama serve
+
 4️⃣ Setup Qdrant Cloud
 Create a cluster:
 👉 https://cloud.qdrant.io
@@ -85,11 +83,13 @@ https://xxxx-xxxx-xxxx.gcp.cloud.qdrant.io
 5️⃣ Set Your PDF
 Set your PDF path in code:
 pdf_file = "data/tnesevai.pdf"
+
 ▶️ Run the App
 streamlit run stream.py
 Open:
 👉 http://localhost:8501
 
+---
 ✅ Expected Startup Log
 Initializing RAG system...
 Loaded 66 documents
@@ -97,6 +97,7 @@ Split into 134 chunks
 Connected to Qdrant
 Chatbot Ready
 
+---
 🚀 Future Enhancements
 📎 Show source text + page number
 
@@ -107,6 +108,8 @@ Chatbot Ready
 🤖 Upgrade to Qwen 7B for better reasoning
 
 🧪 Confidence scoring
+
+---
 
 ❤️ Credits
 Built with:
@@ -119,5 +122,6 @@ Ollama
 
 Streamlit
 
+---
 ⭐ Support
 If you like this project, please ⭐ star the repo!
