@@ -35,7 +35,7 @@ The bot understands your questions, retrieves relevant answers from an official 
 ---
 
 ## 🧠 RAG Architecture
-```mermaid
+
 flowchart LR
 A[PDF Document] --> B[Text Splitter]
 B --> C[Embedding Model]
