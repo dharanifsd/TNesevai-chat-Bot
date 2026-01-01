@@ -8,8 +8,8 @@ from litellm import completion
 
 # --- Configuration and Initialization ---
 # You might want to move these to a separate config file or Streamlit secrets
-urls = "https://919de249-6933-4495-8c35-b166a07c4f77.europe-west3-0.gcp.cloud.qdrant.io"
-api_keys = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.qfr5SKS2Mos6OIiSpw5YCsBvYt99fO0MLEtHDFOa2j0"
+urls = "url"
+api_keys = "bow bow"
 pdf_file = "tnesevai_services.pdf"
 
 @st.cache_resource
